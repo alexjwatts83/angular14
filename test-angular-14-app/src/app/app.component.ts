@@ -5,7 +5,7 @@ import { first, last } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   title = 'test-angular-14-app';
@@ -13,11 +13,11 @@ export class AppComponent implements OnInit {
   /**
    *
    */
-  constructor() {
-  }
+  constructor() {}
   ngOnInit(): void {
+    // v14 partial typed form, migrating `UntypedFormGroup` -> `FormGroup`
     const cat = new FormGroup({
-      lives: new FormControl(9)
-   });
+      lives: new UntypedFormControl(9),
+    });
   }
 }
