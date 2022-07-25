@@ -9,15 +9,14 @@ import { first, last } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'test-angular-14-app';
-
+  cat = new FormGroup({
+    lives: new UntypedFormControl(9),
+  });
   /**
    *
    */
   constructor() {}
   ngOnInit(): void {
     // v14 partial typed form, migrating `UntypedFormGroup` -> `FormGroup`
-    const cat = new FormGroup({
-      lives: new UntypedFormControl(9),
-    });
   }
 }
