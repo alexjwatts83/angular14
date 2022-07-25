@@ -1,6 +1,6 @@
 <div>
   <h1>Angular 14 stuff</h1>
-  <form [formGroup]="contactForm">
+  <form (ngSubmit)="onSubmitContactForm()" [formGroup]="contactForm">
     <div>
       <label for="name">Name: </label>
       <input id="name" type="text" formControlName="name">
@@ -16,6 +16,9 @@
     <div>
       <label for="query">Query: </label>
       <textarea id="query" type="text" formControlName="query"></textarea>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
     </div>
   </form>
 </div>
