@@ -1,6 +1,21 @@
 <div>
   <h1>Angular 14 stuff</h1>
   <form [formGroup]="contactForm">
-
+    <div>
+      <label for="name">Name: </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+    <div>
+      <label for="email">Email: </label>
+      <input id="email" type="text" formControlName="email">
+    </div>
+    <div>
+      <label for="contactNumber">Contact Number: </label>
+      <input id="contactNumber" type="text" formControlName="contactNumber">
+    </div>
+    <div>
+      <label for="query">Query: </label>
+      <textarea id="query" type="text" formControlName="query"></textarea>
+    </div>
   </form>
 </div>
