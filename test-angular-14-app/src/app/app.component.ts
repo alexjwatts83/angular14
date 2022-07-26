@@ -27,10 +27,13 @@ export class AppComponent implements OnInit {
   constructor() {}
   ngOnInit(): void {}
   onSubmitContactForm() {
-    console.log({ submit: true });
+    console.log({ submit: true, frm: this.contactForm.value });
   }
   resetSubmitContactForm() {
     this.contactForm.reset();
     this.dataOutput = '';
+  }
+  removeQuery(){
+    this.contactForm.removeControl('query'); //This code removes the optional control from typed model
   }
 }
