@@ -24,14 +24,16 @@ export class AppComponent implements OnInit {
       nonNullable: false,
     }),
   });
-  /**
-   *
-   */
+  dataOutput: string = '';
   constructor() {}
   ngOnInit(): void {
     // v14 partial typed form, migrating `UntypedFormGroup` -> `FormGroup`
   }
   onSubmitContactForm() {
     console.log({ submit: true });
+  }
+  resetSubmitContactForm() {
+    this.contactForm.reset();
+    this.dataOutput = '';
   }
 }
