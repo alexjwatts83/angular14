@@ -20,6 +20,8 @@
     <div>
       <button type="submit">Submit</button>
       <button (click)="resetSubmitContactForm()" type="reset">Reset</button>
+      <button (click)="removeQuery()">Remove Query</button>
     </div>
   </form>
+  <p [innerHTML]="dataOutput"></p>
 </div>
