@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, UntypedFormControl } from '@angular/forms';
-import { first, last } from 'rxjs';
 
 export interface ContactForm {
   name: FormControl<string>;
@@ -26,9 +25,7 @@ export class AppComponent implements OnInit {
   });
   dataOutput: string = '';
   constructor() {}
-  ngOnInit(): void {
-    // v14 partial typed form, migrating `UntypedFormGroup` -> `FormGroup`
-  }
+  ngOnInit(): void {}
   onSubmitContactForm() {
     console.log({ submit: true });
   }
