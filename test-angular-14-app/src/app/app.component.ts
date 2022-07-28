@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
     this.contactForm.reset();
     this.dataOutput = '';
   }
-  removeQuery(){
+  removeQuery() {
     this.contactForm.removeControl('query'); //This code removes the optional control from typed model
   }
 }
