@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, UntypedFormControl } from '@angular/forms';
+import { FormControl, FormGroup, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 export interface ContactForm {
   name: FormControl<string>;
@@ -22,6 +22,14 @@ export class AppComponent implements OnInit {
     query: new FormControl<string>('I would like to connect!', {
       nonNullable: false,
     }),
+  });
+  profileForm = new FormGroup({
+    firstName: new UntypedFormControl(''),
+    lastName: new UntypedFormControl(''),
+    address: new UntypedFormGroup({
+      street: new UntypedFormControl(''),
+      city: new UntypedFormControl('')
+    })
   });
   dataOutput: string = '';
   constructor() {}
