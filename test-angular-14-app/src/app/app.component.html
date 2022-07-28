@@ -1,6 +1,7 @@
 <div>
   <h1>Angular 14 stuff</h1>
-  <h2>Typed Form</h2>
+  <section>
+    <h2>Typed Form</h2>
   <form (ngSubmit)="onSubmitContactForm()" [formGroup]="contactForm">
     <div>
       <label for="name">Name: </label>
@@ -31,4 +32,5 @@
 {{ contactForm | json }}
 </pre>
   </div>
+  </section>
 </div>
