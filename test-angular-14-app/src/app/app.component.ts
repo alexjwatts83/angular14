@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { FormControl, FormGroup, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 export interface ContactForm {
   name: FormControl<string>;
@@ -24,13 +24,13 @@ export class AppComponent implements OnInit {
     }),
   });
   profileForm = new FormGroup({
-    firstName: new UntypedFormControl(''),
-    lastName: new UntypedFormControl(''),
+    firstName: new UntypedFormControl(null, Validators.required),
+    lastName: new UntypedFormControl(null, Validators.required),
     address: new UntypedFormGroup({
-      street: new UntypedFormControl(''),
-      city: new UntypedFormControl('')
+      street: new UntypedFormControl(null, Validators.required),
+      city: new UntypedFormControl(null, Validators.required)
     }),
-    contactNumber: new UntypedFormControl(''),
+    contactNumber: new UntypedFormControl(null, Validators.required),
   });
   dataOutput: string = '';
   constructor() {}
@@ -45,6 +45,7 @@ export class AppComponent implements OnInit {
   removeQuery() {
     this.contactForm.removeControl('query'); //This code removes the optional control from typed model
   }
+  
   onSubmitProfileForm() {
     console.log({ submit: true, frm: this.profileForm.value });
   }
