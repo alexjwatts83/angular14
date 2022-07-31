@@ -44,4 +44,7 @@ export class AppComponent implements OnInit {
   removeQuery() {
     this.contactForm.removeControl('query'); //This code removes the optional control from typed model
   }
+  onSubmitProfileForm() {
+    console.log({ submit: true, frm: this.profileForm.value });
+  }
 }
