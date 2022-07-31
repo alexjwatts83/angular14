@@ -29,7 +29,8 @@ export class AppComponent implements OnInit {
     address: new UntypedFormGroup({
       street: new UntypedFormControl(''),
       city: new UntypedFormControl('')
-    })
+    }),
+    contactNumber: new UntypedFormControl(''),
   });
   dataOutput: string = '';
   constructor() {}
