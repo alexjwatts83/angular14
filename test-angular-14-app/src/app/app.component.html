@@ -34,7 +34,7 @@
       </pre>
     </div>
   </section>
-  <!-- <section>
+  <section>
     <h2>Untyped Form</h2>
     <form (ngSubmit)="onSubmitProfileForm()" [formGroup]="profileForm">
       <div>
@@ -49,11 +49,15 @@
         <label for="contactNumber">Contact Number: </label>
         <input type="text" formControlName="contactNumber" />
       </div>
+      <div>
+        <label for="contactNumber">Contact Number: </label>
+        <input type="text" formControlName="contactNumber" />
+      </div>
     </form>
     <div style="border: 1px solid rec; padding: 5px;background-color: antiquewhite;">
       <pre>
-{{ profileForm | json }}
+{{ profileForm.value | json }}
       </pre>
     </div>
-  </section> -->
+  </section>
 </div>
