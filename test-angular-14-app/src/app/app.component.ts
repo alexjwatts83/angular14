@@ -23,15 +23,15 @@ export class AppComponent implements OnInit {
       nonNullable: false,
     }),
   });
-  // profileForm = new UntypedFormGroup({
-  //   firstName: new UntypedFormControl(null, Validators.required),
-  //   lastName: new UntypedFormControl(null, Validators.required),
-  //   address: new UntypedFormGroup({
-  //     street: new UntypedFormControl(null, Validators.required),
-  //     city: new UntypedFormControl(null, Validators.required)
-  //   }),
-  //   contactNumber: new UntypedFormControl(null, Validators.required),
-  // });
+  profileForm = new UntypedFormGroup({
+    firstName: new UntypedFormControl(null, Validators.required),
+    lastName: new UntypedFormControl(null, Validators.required),
+    address: new UntypedFormGroup({
+      street: new UntypedFormControl(null, Validators.required),
+      city: new UntypedFormControl(null, Validators.required)
+    }),
+    contactNumber: new UntypedFormControl(null, Validators.required),
+  });
   dataOutput: string = '';
   constructor() {}
   ngOnInit(): void {
