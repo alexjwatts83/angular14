@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormRecord, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormRecord, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 export interface ContactForm {
   name: FormControl<string>;
@@ -38,7 +38,13 @@ export class AppComponent implements OnInit {
     music: new FormControl('', { nonNullable: true })
   });
   dataOutput: string = '';
-  constructor() {}
+  skillsForm: FormGroup;
+  constructor(private fb:FormBuilder) {
+    this.skillsForm = this.fb.group({
+      name: '',
+      skills: this.fb.array([]) ,
+    });
+  }
   ngOnInit(): void {
     this.contactForm.valueChanges.subscribe(x => {
       console.log({contactForm: x});
