@@ -26,7 +26,7 @@
       </div>
     </form>
     <p [innerHTML]="dataOutput"></p>
-    <div style="border: 1px solid rec; padding: 5px;">
+    <div style="border: 1px solid rec; padding: 5px;background-color: aquamarine;">
       <pre>
 {{ contactForm | json }}
       </pre>
@@ -48,5 +48,10 @@
         <input type="text" formControlName="contactNumber" />
       </div>
     </form>
+    <div style="border: 1px solid rec; padding: 5px;background-color: antiquewhite;">
+      <pre>
+{{ profileForm | json }}
+      </pre>
+    </div>
   </section>
 </div>
