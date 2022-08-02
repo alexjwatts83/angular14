@@ -34,8 +34,8 @@ export class AppComponent implements OnInit {
   });
 
   folders = new FormRecord({
-    home: new FormControl(true, { nonNullable: true }),
-    music: new FormControl(false, { nonNullable: true })
+    home: new FormControl('', { nonNullable: true }),
+    music: new FormControl('', { nonNullable: true })
   });
   dataOutput: string = '';
   constructor() {}
