@@ -15,24 +15,26 @@
         <label for="contactNumber">Contact Number: </label>
         <input id="contactNumber" type="text" formControlName="contactNumber" />
       </div>
+      
       <div>
         <label for="query">Query: </label>
         <textarea id="query" type="text" formControlName="query"></textarea>
       </div>
+      
       <div>
         <button type="submit">Submit</button>
         <button (click)="resetSubmitContactForm()" type="reset">Reset</button>
         <button (click)="removeQuery()">Remove Query</button>
       </div>
     </form>
-    <p [innerHTML]="dataOutput"></p>
+     <p [innerHTML]="dataOutput"></p>
     <div style="border: 1px solid rec; padding: 5px;background-color: aquamarine;">
       <pre>
-{{ contactForm | json }}
+{{ contactForm.value | json }}
       </pre>
     </div>
   </section>
-  <section>
+  <!-- <section>
     <h2>Untyped Form</h2>
     <form (ngSubmit)="onSubmitProfileForm()" [formGroup]="profileForm">
       <div>
@@ -53,5 +55,5 @@
 {{ profileForm | json }}
       </pre>
     </div>
-  </section>
+  </section> -->
 </div>

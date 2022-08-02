@@ -23,20 +23,20 @@ export class AppComponent implements OnInit {
       nonNullable: false,
     }),
   });
-  profileForm = new FormGroup({
-    firstName: new UntypedFormControl(null, Validators.required),
-    lastName: new UntypedFormControl(null, Validators.required),
-    address: new UntypedFormGroup({
-      street: new UntypedFormControl(null, Validators.required),
-      city: new UntypedFormControl(null, Validators.required)
-    }),
-    contactNumber: new UntypedFormControl(null, Validators.required),
-  });
+  // profileForm = new UntypedFormGroup({
+  //   firstName: new UntypedFormControl(null, Validators.required),
+  //   lastName: new UntypedFormControl(null, Validators.required),
+  //   address: new UntypedFormGroup({
+  //     street: new UntypedFormControl(null, Validators.required),
+  //     city: new UntypedFormControl(null, Validators.required)
+  //   }),
+  //   contactNumber: new UntypedFormControl(null, Validators.required),
+  // });
   dataOutput: string = '';
   constructor() {}
   ngOnInit(): void {
     this.contactForm.valueChanges.subscribe(x => {
-      console.log({contactForm: this.contactForm});
+      console.log({contactForm: x});
     })
   }
   onSubmitContactForm() {
@@ -51,6 +51,6 @@ export class AppComponent implements OnInit {
   }
   
   onSubmitProfileForm() {
-    console.log({ submit: true, frm: this.profileForm.value });
+    // console.log({ submit: true, frm: this.profileForm.value });
   }
 }
