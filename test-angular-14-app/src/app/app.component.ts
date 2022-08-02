@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormRecord, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 export interface ContactForm {
   name: FormControl<string>;
@@ -31,6 +31,11 @@ export class AppComponent implements OnInit {
       city: new UntypedFormControl(null, Validators.required)
     }),
     contactNumber: new UntypedFormControl(null, Validators.required),
+  });
+
+  folders = new FormRecord({
+    home: new FormControl(true, { nonNullable: true }),
+    music: new FormControl(false, { nonNullable: true })
   });
   dataOutput: string = '';
   constructor() {}
