@@ -34,7 +34,11 @@ export class AppComponent implements OnInit {
   });
   dataOutput: string = '';
   constructor() {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.contactForm.valueChanges.subscribe(x => {
+      console.log({contactForm: this.contactForm});
+    })
+  }
   onSubmitContactForm() {
     console.log({ submit: true, frm: this.contactForm.value });
   }
