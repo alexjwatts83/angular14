@@ -87,8 +87,26 @@
     <h2>Form Array</h2>
     <form (ngSubmit)="onSubmitProfileForm()" [formGroup]="skillsForm">
       <div>
-        <label for="name">Skills: </label>
+        <label for="name">Name: </label>
         <input type="text" formControlName="name" />
+      </div>
+      <p>
+        <button type="button" (click)="addSkills()">Add</button>
+      </p>
+      <div>
+        <div formArrayName="skills">
+          <div *ngFor="let skill of skills.controls; let i=index">
+            <div [formGroupName]="i">
+              {{i}}
+              skill name :
+              <input type="text" formControlName="skill">
+              exp:
+              <input type="text" formControlName="exp">
+       
+              <!-- <button (click)="removeSkill(i)">Remove</button> -->
+            </div>
+          </div>
+        </div>
       </div>
     </form>
     <div style="border: 1px solid rec; padding: 5px;background-color: cornflowerblue;">
