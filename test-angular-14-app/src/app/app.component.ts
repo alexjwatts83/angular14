@@ -62,6 +62,5 @@ export class AppComponent implements OnInit {
   }
   
   onSubmitProfileForm() {
-    // console.log({ submit: true, frm: this.profileForm.value });
   }
 }
