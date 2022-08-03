@@ -76,9 +76,24 @@
         <input type="text" formControlName="home" />
       </div>
     </form>
-    <div style="border: 1px solid rec; padding: 5px;background-color: antiquewhite;">
+    <div style="border: 1px solid rec; padding: 5px;background-color: azure;">
       <pre>
 {{ folders.value | json }}
+      </pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>Form Array</h2>
+    <form (ngSubmit)="onSubmitProfileForm()" [formGroup]="skillsForm">
+      <div>
+        <label for="name">Skills: </label>
+        <input type="text" formControlName="name" />
+      </div>
+    </form>
+    <div style="border: 1px solid rec; padding: 5px;background-color: cornflowerblue;">
+      <pre>
+{{ skillsForm.value | json }}
       </pre>
     </div>
   </section>

@@ -38,7 +38,9 @@ export class AppComponent implements OnInit {
     music: new FormControl('', { nonNullable: true })
   });
   dataOutput: string = '';
+  
   skillsForm: FormGroup;
+
   constructor(private fb:FormBuilder) {
     this.skillsForm = this.fb.group({
       name: '',
