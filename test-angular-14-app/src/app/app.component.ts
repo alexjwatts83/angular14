@@ -85,6 +85,10 @@ export class AppComponent implements OnInit {
     });
   }
 
+  removeSkill(i:number) {
+    this.skills.removeAt(i);
+  }
+  
   addSkills() {
     this.skills.push(this.newSkill());
   }
