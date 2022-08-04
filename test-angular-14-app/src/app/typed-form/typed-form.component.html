@@ -1,5 +1,6 @@
 <section>
   <h2>Typed Form</h2>
+
   <form (ngSubmit)="onSubmitContactForm()" [formGroup]="contactForm">
     <div>
       <label for="name">Name: </label>
@@ -24,6 +25,7 @@
       <button (click)="resetSubmitContactForm()" type="reset">Reset</button>
       <button (click)="removeQuery()">Remove Query</button>
     </div>
+
   </form>
    <p [innerHTML]="dataOutput"></p>
   <div style="border: 1px solid rec; padding: 5px;background-color: aquamarine;">

@@ -52,8 +52,6 @@ export class AppComponent implements OnInit {
 
   }
 
-
-
   onSubmitProfileForm() {}
 
   newSkill(): FormGroup {
