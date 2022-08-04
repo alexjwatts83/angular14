@@ -1,39 +1,6 @@
 <div>
   <h1>Angular 14 stuff</h1>
-  <section>
-    <h2>Typed Form</h2>
-    <form (ngSubmit)="onSubmitContactForm()" [formGroup]="contactForm">
-      <div>
-        <label for="name">Name: </label>
-        <input id="name" type="text" formControlName="name" />
-      </div>
-      <div>
-        <label for="email">Email: </label>
-        <input id="email" type="text" formControlName="email" />
-      </div>
-      <div>
-        <label for="contactNumber">Contact Number: </label>
-        <input id="contactNumber" type="text" formControlName="contactNumber" />
-      </div>
-      
-      <div>
-        <label for="query">Query: </label>
-        <textarea id="query" type="text" formControlName="query"></textarea>
-      </div>
-      
-      <div>
-        <button type="submit">Submit</button>
-        <button (click)="resetSubmitContactForm()" type="reset">Reset</button>
-        <button (click)="removeQuery()">Remove Query</button>
-      </div>
-    </form>
-     <p [innerHTML]="dataOutput"></p>
-    <div style="border: 1px solid rec; padding: 5px;background-color: aquamarine;">
-      <pre>
-{{ contactForm.value | json }}
-      </pre>
-    </div>
-  </section>
+
   <section>
     <h2>Untyped Form</h2>
     <form (ngSubmit)="onSubmitProfileForm()" [formGroup]="profileForm">
@@ -102,7 +69,7 @@
               <input type="text" formControlName="skill">
               exp:
               <input type="text" formControlName="exp">
-       
+
               <button (click)="removeSkill(i)">Remove</button>
             </div>
           </div>

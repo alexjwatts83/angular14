@@ -10,12 +10,7 @@ import {
   Validators,
 } from '@angular/forms';
 
-export interface ContactForm {
-  name: FormControl<string>;
-  email: FormControl<string>;
-  contactNumber?: FormControl<number | null>;
-  query?: FormControl<string | null>;
-}
+
 
 @Component({
   selector: 'app-root',
@@ -24,14 +19,7 @@ export interface ContactForm {
 })
 export class AppComponent implements OnInit {
   title = 'test-angular-14-app';
-  contactForm = new FormGroup<ContactForm>({
-    name: new FormControl<string>('', { nonNullable: true }),
-    email: new FormControl<string>('', { nonNullable: true }),
-    contactNumber: new FormControl<number>(0, { nonNullable: false }),
-    query: new FormControl<string>('I would like to connect!', {
-      nonNullable: false,
-    }),
-  });
+
   profileForm = new UntypedFormGroup({
     firstName: new UntypedFormControl(null, Validators.required),
     lastName: new UntypedFormControl(null, Validators.required),
@@ -46,7 +34,7 @@ export class AppComponent implements OnInit {
     home: new FormControl('', { nonNullable: true }),
     music: new FormControl('', { nonNullable: true }),
   });
-  dataOutput: string = '';
+
 
   skillsForm: FormGroup;
 
@@ -61,20 +49,10 @@ export class AppComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    this.contactForm.valueChanges.subscribe((x) => {
-      console.log({ contactForm: x });
-    });
+
   }
-  onSubmitContactForm() {
-    console.log({ submit: true, frm: this.contactForm.value });
-  }
-  resetSubmitContactForm() {
-    this.contactForm.reset();
-    this.dataOutput = '';
-  }
-  removeQuery() {
-    this.contactForm.removeControl('query'); //This code removes the optional control from typed model
-  }
+
+
 
   onSubmitProfileForm() {}
 
@@ -88,7 +66,7 @@ export class AppComponent implements OnInit {
   removeSkill(i:number) {
     this.skills.removeAt(i);
   }
-  
+
   addSkills() {
     this.skills.push(this.newSkill());
   }
