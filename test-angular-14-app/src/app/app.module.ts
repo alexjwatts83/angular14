@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TypedFormComponent } from './typed-form/typed-form.component';
+import { UntypedFormComponent } from './untyped-form/untyped-form.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
-      TypedFormComponent
+      TypedFormComponent,
+      UntypedFormComponent
    ],
   imports: [
     BrowserModule,
