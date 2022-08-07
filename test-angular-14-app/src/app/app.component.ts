@@ -22,10 +22,7 @@ export class AppComponent implements OnInit {
 
 
 
-  folders = new FormRecord({
-    home: new FormControl('', { nonNullable: true }),
-    music: new FormControl('', { nonNullable: true }),
-  });
+
 
 
   skillsForm: FormGroup;
