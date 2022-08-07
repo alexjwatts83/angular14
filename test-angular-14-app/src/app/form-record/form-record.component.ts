@@ -15,5 +15,5 @@ export class FormRecordComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  onSubmitProfileForm() {}
 }
