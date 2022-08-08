@@ -25,12 +25,6 @@ export class AppComponent implements OnInit {
 
 
 
-  skillsForm: FormGroup;
-
-  get skills(): FormArray {
-    return this.skillsForm.get('skills') as FormArray;
-  }
-
   constructor(private fb: FormBuilder) {
     this.skillsForm = this.fb.group({
       name: '',
