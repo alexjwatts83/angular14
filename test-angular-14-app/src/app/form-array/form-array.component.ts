@@ -21,4 +21,20 @@ export class FormArrayComponent implements OnInit {
   }
 
   ngOnInit() {}
+  onSubmitProfileForm() {}
+
+  newSkill(): FormGroup {
+    return this.fb.group({
+      skill: '',
+      exp: '',
+    });
+  }
+
+  removeSkill(i:number) {
+    this.skills.removeAt(i);
+  }
+
+  addSkills() {
+    this.skills.push(this.newSkill());
+  }
 }

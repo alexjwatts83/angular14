@@ -26,29 +26,8 @@ export class AppComponent implements OnInit {
 
 
   constructor(private fb: FormBuilder) {
-    this.skillsForm = this.fb.group({
-      name: '',
-      skills: this.fb.array([]),
-    });
   }
   ngOnInit(): void {
 
-  }
-
-  onSubmitProfileForm() {}
-
-  newSkill(): FormGroup {
-    return this.fb.group({
-      skill: '',
-      exp: '',
-    });
-  }
-
-  removeSkill(i:number) {
-    this.skills.removeAt(i);
-  }
-
-  addSkills() {
-    this.skills.push(this.newSkill());
   }
 }
