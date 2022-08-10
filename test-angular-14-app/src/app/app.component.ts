@@ -10,8 +10,6 @@ import {
   Validators,
 } from '@angular/forms';
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,14 +18,6 @@ import {
 export class AppComponent implements OnInit {
   title = 'test-angular-14-app';
 
-
-
-
-
-
-  constructor(private fb: FormBuilder) {
-  }
-  ngOnInit(): void {
-
-  }
+  constructor(private fb: FormBuilder) {}
+  ngOnInit(): void {}
 }

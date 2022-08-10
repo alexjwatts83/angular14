@@ -21,6 +21,7 @@ export class FormArrayComponent implements OnInit {
   }
 
   ngOnInit() {}
+
   onSubmitProfileForm() {}
 
   newSkill(): FormGroup {
@@ -30,7 +31,7 @@ export class FormArrayComponent implements OnInit {
     });
   }
 
-  removeSkill(i:number) {
+  removeSkill(i: number) {
     this.skills.removeAt(i);
   }
 
